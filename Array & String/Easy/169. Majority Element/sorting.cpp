@@ -1,3 +1,5 @@
+// Since the majority element appears more than n / 2 times, the n / 2-th element in the sorted nums must be the majority element.
+
 class Solution {
 public:
     int majorityElement(vector<int>& nums) {
