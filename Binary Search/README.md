@@ -1,6 +1,6 @@
 # How to nail binary search the very first time
 1. Use a variable to store the temporary result during the search(let's call it ans). Every time you hit a not found condition AND if there is a possibility of one of the mid or its neighbours being the desired answer store it.
-  * Reason : storing can't harm you if its constant space, the later points will show you how it reduces a burden while writing binary search. Also it ensures an answer.
+   * Reason : storing can't harm you if its constant space, the later points will show you how it reduces a burden while writing binary search. Also it ensures an answer.
 
 2. Whenever you hit not found condition do s = mid+1 or e = mid-1 according to the condition without worrying.
    * Reason : You have stored your value if the loop ends, can't go wrong. This also ensures you don't go into infinite loops.
