@@ -6,7 +6,6 @@ public:
         int maxlen = 1, max_left = 0;
         
         for(int mid = 0; mid < s.size(); mid++){
-            // odd len
             int left = mid, right = mid;
             
             while(right < s.size()-1 && s[right] == s[right+1]) right++;
