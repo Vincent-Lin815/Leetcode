@@ -4,8 +4,10 @@ public:
         int max_len = 1, start = 0, n = s.size();
         int DP_table[n][n];
         
+        // 'a', 'b', 'c'...... is Palindrome
         for(int i = 0; i < n; i++) DP_table[i][i] = 1;
         
+        // 'aa', 'bb', 'cc'...... is Palindrome
         for(int j = 0; j < n-1; j++){
             if(s[j] == s[j+1]){
                 DP_table[j][j+1] = 1;
@@ -16,6 +18,9 @@ public:
             }
         }
         
+        // a"bab"a is a Palindrome if 
+        // 1) s[start] == start[end] 
+        // 2) DP_table[start+1][end-1] == 1 (bab is Palindrome)
         for(int len = 3; len <= n; len++){
             for(int st = 0; st < n-len+1; st++){
                 int e = len+st-1;
